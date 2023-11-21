@@ -1,0 +1,152 @@
+:root {
+	--color-primary: #8a3119;
+	--color-secondary: #ede0d1;
+	--color-tertiary: #5a0f19;
+
+	--color-white: #fafafa;
+	--color-black: #1b1b1b;
+
+	--font-body: 'Poppins', sans-serif;
+	--font-heading: 'Patua One', cursive;
+}
+
+.main {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	padding: 8rem 0;
+	color: var(--color-black);
+	font-family: var(--font-body);
+}
+
+.title h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--color-tertiary);
+}
+
+.title p {
+	font-size: 0.9rem;
+}
+
+.search {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.books {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.books {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.books {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (min-width: 1200px) {
+	.books {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+.book {
+	width: 100%;
+	text-decoration: none;
+	color: var(--color-black);
+}
+
+.book .cover {
+	width: 100%;
+	aspect-ratio: 2/3;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.book .rating {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1rem;
+	border-radius: 5px;
+	padding: 0.2rem 0.5rem;
+	background: var(--color-primary);
+	color: var(--color-white);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.book img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s ease-in-out;
+}
+
+.book img:hover {
+	transform: scale(1.05);
+}
+
+.book h3 {
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0.5rem 0;
+}
+
+.book p {
+	font-size: 0.9rem;
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 1rem;
+	gap: 0.5rem;
+}
+
+.active,
+.inactive {
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	border: none;
+	background: var(--color-secondary);
+	color: var(--color-black);
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.active {
+	background: var(--color-primary);
+	color: var(--color-white);
+}
+
+.select {
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	border: none;
+	background: var(--color-secondary);
+	color: var(--color-black);
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	font-weight: 700;
+	cursor: pointer;
+}

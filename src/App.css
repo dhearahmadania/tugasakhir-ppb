@@ -1,0 +1,41 @@
+:root {
+	--color-primary: #8a3119;
+	--color-secondary: #ede0d1;
+	--color-tertiary: #5a0f19;
+
+	--color-white: #fafafa;
+	--color-black: #1b1b1b;
+
+	--font-body: 'Poppins', sans-serif;
+	--font-heading: 'Patua One', cursive;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--font-body);
+	line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.error {
+	color: var(--color-tertiary);
+	margin-top: 1rem;
+	font-size: 0.9rem;
+}

@@ -1,0 +1,90 @@
+:root {
+	--color-primary: #8a3119;
+	--color-secondary: #ede0d1;
+	--color-tertiary: #5a0f19;
+
+	--color-white: #fafafa;
+	--color-black: #1b1b1b;
+
+	--font-body: 'Poppins', sans-serif;
+	--font-heading: 'Patua One', cursive;
+}
+
+.main {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	padding: 8rem 0;
+	color: var(--color-white);
+	font-family: var(--font-body);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('https://images.unsplash.com/photo-1558636815-1978d0419bff?auto=format') center/cover;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+.title {
+	text-align: center;
+}
+
+.title h2 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.title p {
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+.featured {
+	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+}
+
+@media (max-width: 900px) {
+	.featured {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card {
+	padding: 2rem;
+	border-radius: 1rem;
+	color: var(--color-tertiary);
+	background-color: var(--color-secondary);
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.card h2 {
+	font-family: var(--font-heading);
+	font-size: 1.2rem;
+}
+
+.card p {
+	font-size: 0.9rem;
+}
